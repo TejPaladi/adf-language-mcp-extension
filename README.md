@@ -81,15 +81,6 @@ python extension/run_experiment.py --condition author_equation --provider groq -
 python extension/run_experiment.py --condition language_extension --provider groq --limit 10
 ```
 
-For the requested random 50-record run, use the same fixed seed for both conditions. The selected IDs and the seed are saved in each result file.
-
-```bash
-python extension/run_experiment.py --condition author_equation --provider groq \
-  --limit 50 --sample random --seed 42
-python extension/run_experiment.py --condition language_extension --provider groq \
-  --limit 50 --sample random --seed 42
-```
-
 Then use the same provider, model configuration, temperature, and all 1,000 records for each condition:
 
 ```bash
@@ -104,15 +95,6 @@ python extension/compare_results.py \
   results/runs/<equation-run>.json \
   results/runs/<word-problem-run>.json \
   --output results/comparison.md
-```
-
-To preserve the earlier smoke-test table and append the random-50 comparison beneath it, add `--append`:
-
-```bash
-python extension/compare_results.py \
-  results/runs/<random-equation-run>.json \
-  results/runs/<random-word-problem-run>.json \
-  --output results/comparison.md --append
 ```
 
 The comparison command refuses to combine runs that used different models, temperatures, MCP tools, or problem IDs.
@@ -138,4 +120,4 @@ Do not compare a result from this repository directly with a saved upstream pape
 
 ## Included test evidence
 
-[`results/comparison.md`](results/comparison.md) contains two local Groq smoke/evaluation runs. The 10-record smoke test completed with usable results. The reproducible random-50 run uses seed `42`; however, 86 of its 100 attempted model calls are recorded as `api_error`. It is retained as execution-reliability evidence, not as a claim that word-problem input has 0% model accuracy. A valid model-quality comparison requires repeating the same seeded run when the provider completes both conditions reliably.
+[`results/comparison.md`](results/comparison.md) contains the initial 10-record local Groq smoke test. It is included only to show the expected output format and tool-use measurements; it is not a final evaluation.
