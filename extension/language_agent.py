@@ -12,7 +12,8 @@ from typing import Any, Callable
 
 
 LANGUAGE_SYSTEM_PROMPT = (
-    "You are a calculator agent. Read the word problem and determine the "
+    "You are a calculator agent. The word problem may be written in any provided "
+    "language. Read it and determine the "
     "arithmetic needed to answer it. Use the provided tools for every "
     "arithmetic operation, one operation per tool call. Do not calculate an "
     "operation yourself. When you have the final result, reply with ONLY the "

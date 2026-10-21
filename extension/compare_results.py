@@ -29,7 +29,7 @@ def check_pair(equation: dict[str, Any], language: dict[str, Any]) -> None:
     if language.get("condition") != "language_extension":
         raise SystemExit("The second file must be a language_extension run.")
 
-    for field in ("provider", "model", "temperature", "tool_set"):
+    for field in ("architecture", "provider", "model", "temperature", "tool_set"):
         if equation.get(field) != language.get(field):
             raise SystemExit(f"Cannot compare runs: {field} differs between them.")
 

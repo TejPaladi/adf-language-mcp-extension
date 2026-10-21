@@ -1,0 +1,6 @@
+# Optional dependencies for extension/prepare_multilingual_svamp.py only.
+# These download the NLLB model on first use; they are not required to run
+# English-only ADF experiments or inspect saved results.
+transformers>=4.44,<5
+torch>=2.4
+sentencepiece>=0.2

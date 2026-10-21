@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" role="img" aria-labelledby="title description">
+  <title id="title">Accuracy by input condition</title>
+  <desc id="description">Canonical equations scored 100 percent, English 85, Spanish 55, Russian 50, Arabic 45, Chinese 40, and French 40 on the same 20 problems.</desc>
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937">Accuracy by input condition</text>
+  <text x="30" y="63" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Preliminary matched pilot · n=20 · granite4:3b · temperature 0</text>
+
+  <g font-family="Arial, sans-serif" font-size="15" fill="#1f2937">
+    <text x="30" y="111">Equation</text>
+    <text x="30" y="161">English</text>
+    <text x="30" y="211">Spanish</text>
+    <text x="30" y="261">Russian</text>
+    <text x="30" y="311">Arabic</text>
+    <text x="30" y="361">Chinese</text>
+    <text x="30" y="411">French</text>
+  </g>
+
+  <g fill="#e5e7eb">
+    <rect x="135" y="90" width="650" height="27" rx="4"/>
+    <rect x="135" y="140" width="650" height="27" rx="4"/>
+    <rect x="135" y="190" width="650" height="27" rx="4"/>
+    <rect x="135" y="240" width="650" height="27" rx="4"/>
+    <rect x="135" y="290" width="650" height="27" rx="4"/>
+    <rect x="135" y="340" width="650" height="27" rx="4"/>
+    <rect x="135" y="390" width="650" height="27" rx="4"/>
+  </g>
+
+  <g fill="#2563eb">
+    <rect x="135" y="90" width="650" height="27" rx="4"/>
+    <rect x="135" y="140" width="552.5" height="27" rx="4"/>
+  </g>
+  <g fill="#7c3aed">
+    <rect x="135" y="190" width="357.5" height="27" rx="4"/>
+    <rect x="135" y="240" width="325" height="27" rx="4"/>
+    <rect x="135" y="290" width="292.5" height="27" rx="4"/>
+    <rect x="135" y="340" width="260" height="27" rx="4"/>
+    <rect x="135" y="390" width="260" height="27" rx="4"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#111827">
+    <text x="800" y="110">100%</text>
+    <text x="702" y="160">85%</text>
+    <text x="507" y="210">55%</text>
+    <text x="475" y="260">50%</text>
+    <text x="442" y="310">45%</text>
+    <text x="410" y="360">40%</text>
+    <text x="410" y="410">40%</text>
+  </g>
+
+  <text x="30" y="452" font-family="Arial, sans-serif" font-size="13" fill="#6b7280">Non-English translations are machine-generated and not yet human-reviewed.</text>
+</svg>

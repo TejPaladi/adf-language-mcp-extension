@@ -7,3 +7,14 @@ __pycache__/
 # Generated experimental output; keep the directory itself in Git.
 results/runs/*
 !results/runs/.gitkeep
+
+# Local smoke tests and incomplete model-matrix runs.
+results/agent_*
+results/*_plan.json
+results/matrix_runs*/
+results/*healthcheck.json
+results/preliminary_*.json
+results/qwen2_*.json
+
+# Translation-generation rejects retained only for local diagnosis.
+data/multilingual_svamp/*_rejected_*.json
