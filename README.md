@@ -12,6 +12,8 @@ The latest checked artifact is a matched 20-problem MCP-agent pilot using the co
 
 This is a preliminary pilot, not the full 1,000-record multilingual evaluation. The translated inputs preserve all numeric literals but are machine-generated and still require human linguistic review.
 
+The core English extension has also been run on all 1,000 records across all five local MCP-agent models. See the [validated full equation-versus-English report](results/full_1000_agent_equation_vs_english_T0/README.md).
+
 ## Study design
 
 The study has two architectures and two input conditions. The four MCP tools—`add`, `subtract`, `multiply`, and `divide`—are available only to the agent architecture.

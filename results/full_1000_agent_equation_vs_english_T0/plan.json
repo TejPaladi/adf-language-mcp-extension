@@ -1,0 +1,97 @@
+{
+  "languages": [
+    "en"
+  ],
+  "jobs": [
+    {
+      "architecture": "agent",
+      "condition": "author_equation",
+      "language": "en",
+      "provider": "ollama",
+      "model": "llama3.2:1b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__equation__ollama__llama3-2-1b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "language_extension",
+      "language": "en",
+      "provider": "ollama",
+      "model": "llama3.2:1b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__word-en__ollama__llama3-2-1b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "author_equation",
+      "language": "en",
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__equation__ollama__phi4-mini-3-8b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "language_extension",
+      "language": "en",
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__word-en__ollama__phi4-mini-3-8b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "author_equation",
+      "language": "en",
+      "provider": "ollama",
+      "model": "llama3.2:3b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__equation__ollama__llama3-2-3b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "language_extension",
+      "language": "en",
+      "provider": "ollama",
+      "model": "llama3.2:3b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__word-en__ollama__llama3-2-3b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "author_equation",
+      "language": "en",
+      "provider": "ollama",
+      "model": "qwen3.5:4b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__equation__ollama__qwen3-5-4b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "language_extension",
+      "language": "en",
+      "provider": "ollama",
+      "model": "qwen3.5:4b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__word-en__ollama__qwen3-5-4b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "author_equation",
+      "language": "en",
+      "provider": "ollama",
+      "model": "granite4:3b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__equation__ollama__granite4-3b__T0.json"
+    },
+    {
+      "architecture": "agent",
+      "condition": "language_extension",
+      "language": "en",
+      "provider": "ollama",
+      "model": "granite4:3b",
+      "temperature": 0.0,
+      "output": "results/full_1000_agent_equation_vs_english_T0/agent__word-en__ollama__granite4-3b__T0.json"
+    }
+  ]
+}
