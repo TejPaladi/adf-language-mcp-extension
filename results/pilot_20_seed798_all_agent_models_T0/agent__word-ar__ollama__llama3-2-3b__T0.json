@@ -1,0 +1,530 @@
+{
+  "run_id": "20261021T222323Z",
+  "created_at_utc": "2026-10-21T22:24:07.481894+00:00",
+  "architecture": "mcp_agent",
+  "condition": "language_extension",
+  "provider": "ollama",
+  "model": "llama3.2:3b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "ar",
+    "name": "Arabic",
+    "source": "data/multilingual_svamp/svamp_ar.json",
+    "file_sha256": "c366c580913fc9f750741c560dc916c934a43402ed294bcf1e47b42b4ce9d64f",
+    "canonical_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+    "translation_metadata": {
+      "language": "ar",
+      "source_language": "en",
+      "source_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+      "translation_method": {
+        "backend": "NLLB",
+        "model": "facebook/nllb-200-distilled-600M",
+        "source_language_code": "eng_Latn",
+        "target_language_code": "arb_Arab",
+        "numeric_literals": "Protected before translation and restored verbatim afterward.",
+        "batch_size": 8,
+        "max_new_tokens": 256,
+        "device": "mps",
+        "generated_at_utc": "2026-10-15T12:46:39.636259+00:00",
+        "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "completed_records": 1000,
+      "expected_records": 1000,
+      "review_status": "machine-generated; human review required before evaluation"
+    },
+    "translation_use": "preliminary_machine_translated"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 44.377643
+  },
+  "summary": {
+    "records": 20,
+    "correct": 0,
+    "accuracy_percent": 0.0,
+    "outcomes": {
+      "correct": 0,
+      "wrong_answer": 5,
+      "format_failure": 15,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 44.377643,
+    "average_latency_ms": 2218.882,
+    "agent": {
+      "llm_turns": 49,
+      "tool_calls": 29,
+      "tool_errors": 0,
+      "no_tool_answers": 1,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 70.0,
+      "raw_result": "\u0627\u0644\u0645\u0642\u0627\u0644\u0627\u062a \u0627\u0644\u062a\u064a \u062a\u0628\u0642\u0649 \u0644\u0647 \u0645\u0646 \u0627\u0644\u0642\u0644\u0645\u0648\u0646 \u0647\u064a 195.0",
+      "outcome": "format_failure",
+      "latency_ms": 2381.828,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2323149958,
+        "load_duration_ns": 3470541,
+        "prompt_eval_count": 665,
+        "prompt_eval_duration_ns": 1493558000,
+        "eval_count": 33,
+        "eval_duration_ns": 795718000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "\u0627\u0644\u0648\u0642\u062a \u0627\u0644\u0630\u064a \u064a\u0636\u064a\u0639\u0647 \u0631\u0627\u064a\u0627\u0646 \u0639\u0644\u0649 \u062a\u0639\u0644\u0645 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0635\u064a\u0646\u064a\u0629 \u0623\u0643\u062b\u0631 \u0645\u0646 \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u0630\u064a \u064a\u0636\u064a\u0639\u0647 \u0639\u0644\u0649 \u062a\u0639\u0644\u0645 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629 \u0647\u0648 1 \u0633\u0627\u0639\u0629.",
+      "outcome": "format_failure",
+      "latency_ms": 2997.916209,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2983205583,
+        "load_duration_ns": 3157001,
+        "prompt_eval_count": 665,
+        "prompt_eval_duration_ns": 1635917000,
+        "eval_count": 53,
+        "eval_duration_ns": 1314745000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "3 \u0643\u0648\u0628\u0627\u062a \u0645\u0646 \u0627\u0644\u062f\u0642\u064a\u0642.",
+      "outcome": "format_failure",
+      "latency_ms": 1562.066459,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1545803500,
+        "load_duration_ns": 3334209,
+        "prompt_eval_count": 705,
+        "prompt_eval_duration_ns": 798182000,
+        "eval_count": 25,
+        "eval_duration_ns": 659612000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "\u0627\u0644\u0631\u0633\u0627\u0626\u0644 \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a\u0629 \u0627\u0644\u062a\u064a \u062a\u0644\u0642\u0627\u0647\u0627 \u062c\u0627\u0643 \u0641\u064a \u0627\u0644\u0635\u0628\u0627\u062d \u0623\u0643\u062b\u0631 \u0645\u0646 \u0628\u0639\u062f \u0627\u0644\u0638\u0647\u0631 \u0647\u064a 34.",
+      "outcome": "format_failure",
+      "latency_ms": 2050.972666,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2035379083,
+        "load_duration_ns": 3514708,
+        "prompt_eval_count": 706,
+        "prompt_eval_duration_ns": 827715000,
+        "eval_count": 43,
+        "eval_duration_ns": 1132747000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "\u0627\u0644\u062c\u0648\u0627\u0628 \u0647\u0648 13.",
+      "outcome": "format_failure",
+      "latency_ms": 1344.326458,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1329029209,
+        "load_duration_ns": 3269709,
+        "prompt_eval_count": 661,
+        "prompt_eval_duration_ns": 627606000,
+        "eval_count": 24,
+        "eval_duration_ns": 633967000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 21.0,
+      "raw_result": "(\u0641\u0631\u064a\u062f) \u0643\u0633\u0628 29.0 \u062f\u0648\u0644\u0627\u0631 \u062e\u0644\u0627\u0644 \u0639\u0637\u0644\u0629 \u0646\u0647\u0627\u064a\u0629 \u0627\u0644\u0623\u0633\u0628\u0648\u0639.",
+      "outcome": "format_failure",
+      "latency_ms": 2921.131292,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2906443416,
+        "load_duration_ns": 2786750,
+        "prompt_eval_count": 721,
+        "prompt_eval_duration_ns": 1930212000,
+        "eval_count": 39,
+        "eval_duration_ns": 945929000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 64.0,
+      "raw_result": "\u0627\u0644\u0639\u062f\u062f \u0627\u0644\u0623\u0637\u0641\u0627\u0644 \u0641\u064a \u0627\u0644\u062d\u0627\u0641\u0644\u0629 \u0627\u0644\u0622\u0646 \u0647\u0648 64.0",
+      "outcome": "format_failure",
+      "latency_ms": 1384.176458,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1368290292,
+        "load_duration_ns": 3163917,
+        "prompt_eval_count": 631,
+        "prompt_eval_duration_ns": 549970000,
+        "eval_count": 31,
+        "eval_duration_ns": 773554000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "29",
+      "outcome": "wrong_answer",
+      "latency_ms": 3603.94125,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3568347834,
+        "load_duration_ns": 6650500,
+        "prompt_eval_count": 1222,
+        "prompt_eval_duration_ns": 2004604000,
+        "eval_count": 62,
+        "eval_duration_ns": 1509274000
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 29.0,
+      "raw_result": "{\"name\":\"divide\",\"parameters{\"a\":203,\"b\":7}}",
+      "outcome": "format_failure",
+      "latency_ms": 686.853208,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 682664583,
+        "load_duration_ns": 1547458,
+        "prompt_eval_count": 432,
+        "prompt_eval_duration_ns": 233001000,
+        "eval_count": 16,
+        "eval_duration_ns": 417666000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 8.0,
+      "raw_result": "{\"name\": \"round\", \"parameters\": {\"a\": \"2\", \"b\": \"3\"}}",
+      "outcome": "format_failure",
+      "latency_ms": 1947.69325,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1932953292,
+        "load_duration_ns": 3059042,
+        "prompt_eval_count": 700,
+        "prompt_eval_duration_ns": 860852000,
+        "eval_count": 38,
+        "eval_duration_ns": 1038084000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 28.0,
+      "raw_result": "20",
+      "outcome": "wrong_answer",
+      "latency_ms": 2776.861875,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2742239000,
+        "load_duration_ns": 7335668,
+        "prompt_eval_count": 1258,
+        "prompt_eval_duration_ns": 1054384999,
+        "eval_count": 62,
+        "eval_duration_ns": 1614043999
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "\u0627\u0644\u062c\u0648\u0627\u0628 \u0647\u0648 1.",
+      "outcome": "format_failure",
+      "latency_ms": 1312.840958,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1298482834,
+        "load_duration_ns": 3420001,
+        "prompt_eval_count": 655,
+        "prompt_eval_duration_ns": 601217000,
+        "eval_count": 24,
+        "eval_duration_ns": 633175000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "79",
+      "outcome": "wrong_answer",
+      "latency_ms": 3533.696791,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3499370542,
+        "load_duration_ns": 6502542,
+        "prompt_eval_count": 1231,
+        "prompt_eval_duration_ns": 2055203000,
+        "eval_count": 59,
+        "eval_duration_ns": 1402033000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 337.0,
+      "raw_result": "\u0627\u0644\u0641\u062a\u064a\u0627\u0646 \u0641\u064a \u062a\u0644\u0643 \u0627\u0644\u0645\u062f\u0631\u0633\u0629: 337.0",
+      "outcome": "format_failure",
+      "latency_ms": 1400.028042,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1385983875,
+        "load_duration_ns": 3208833,
+        "prompt_eval_count": 610,
+        "prompt_eval_duration_ns": 577808000,
+        "eval_count": 29,
+        "eval_duration_ns": 756833000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 101.0,
+      "raw_result": "\u064a\u062c\u0628 \u0623\u0646 \u062a\u064f\u0639\u0637\u064a \u0643\u064a\u0644\u064a 4 \u0623\u0644\u0639\u0627\u0628 \u0633\u0648\u0646\u064a \u0644\u0643\u064a \u062a\u062d\u0635\u0644 \u0639\u0644\u064a\u0647\u0627 31 \u0623\u0644\u0639\u0627\u0628 \u0633\u0648\u0646\u064a \u0645\u062a\u0628\u0642\u064a\u0629.",
+      "outcome": "format_failure",
+      "latency_ms": 2982.167875,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2965021041,
+        "load_duration_ns": 5374125,
+        "prompt_eval_count": 653,
+        "prompt_eval_duration_ns": 1789635000,
+        "eval_count": 46,
+        "eval_duration_ns": 1143175000
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 105.0,
+      "raw_result": "87",
+      "outcome": "wrong_answer",
+      "latency_ms": 3265.176167,
+      "agent_stats": {
+        "llm_turns": 5,
+        "tool_calls": 4,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3220785834,
+        "load_duration_ns": 9460500,
+        "prompt_eval_count": 1566,
+        "prompt_eval_duration_ns": 1102145000,
+        "eval_count": 78,
+        "eval_duration_ns": 2035747000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 152.0,
+      "raw_result": "12212.0",
+      "outcome": "wrong_answer",
+      "latency_ms": 2139.517666,
+      "agent_stats": {
+        "llm_turns": 3,
+        "tool_calls": 2,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2113723125,
+        "load_duration_ns": 5836916,
+        "prompt_eval_count": 948,
+        "prompt_eval_duration_ns": 943451000,
+        "eval_count": 41,
+        "eval_duration_ns": 1097783000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "\u0643\u0644\u0627\u0647\u0645\u0627 7 \u0643\u0648\u0643\u064a\u0632",
+      "outcome": "format_failure",
+      "latency_ms": 1382.822167,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1368674250,
+        "load_duration_ns": 3737458,
+        "prompt_eval_count": 611,
+        "prompt_eval_duration_ns": 632236000,
+        "eval_count": 26,
+        "eval_duration_ns": 686296000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 210.0,
+      "raw_result": "\u0627\u0644\u062c\u0648\u0627\u0628 \u0647\u0648: 210",
+      "outcome": "format_failure",
+      "latency_ms": 2188.441625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2174135499,
+        "load_duration_ns": 2600083,
+        "prompt_eval_count": 633,
+        "prompt_eval_duration_ns": 1571593000,
+        "eval_count": 24,
+        "eval_duration_ns": 574617000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 40.0,
+      "raw_result": "{\"name\": \"convert\", \"parameters\": {\"a\": \"40\", \"b\": \"4\"}}",
+      "outcome": "format_failure",
+      "latency_ms": 2461.224166,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2447441501,
+        "load_duration_ns": 2637168,
+        "prompt_eval_count": 641,
+        "prompt_eval_duration_ns": 1485716000,
+        "eval_count": 38,
+        "eval_duration_ns": 934608000
+      }
+    }
+  ]
+}

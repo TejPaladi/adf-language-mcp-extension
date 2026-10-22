@@ -1,0 +1,530 @@
+{
+  "run_id": "20261021T221611Z",
+  "created_at_utc": "2026-10-21T22:17:01.867524+00:00",
+  "architecture": "mcp_agent",
+  "condition": "language_extension",
+  "provider": "ollama",
+  "model": "llama3.2:1b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "es",
+    "name": "Spanish",
+    "source": "data/multilingual_svamp/svamp_es.json",
+    "file_sha256": "3368abfb65d69ab1a6fd3bab579bf0d250adcb8dd7cd0face611a21c07141288",
+    "canonical_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+    "translation_metadata": {
+      "language": "es",
+      "source_language": "en",
+      "source_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+      "translation_method": {
+        "backend": "NLLB",
+        "model": "facebook/nllb-200-distilled-600M",
+        "source_language_code": "eng_Latn",
+        "target_language_code": "spa_Latn",
+        "numeric_literals": "Protected before translation and restored verbatim afterward.",
+        "batch_size": 8,
+        "max_new_tokens": 256,
+        "device": "mps",
+        "generated_at_utc": "2026-10-15T13:25:10.962408+00:00",
+        "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "completed_records": 1000,
+      "expected_records": 1000,
+      "review_status": "machine-generated; human review required before evaluation"
+    },
+    "translation_use": "preliminary_machine_translated"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 49.877311
+  },
+  "summary": {
+    "records": 20,
+    "correct": 1,
+    "accuracy_percent": 5.0,
+    "outcomes": {
+      "correct": 1,
+      "wrong_answer": 3,
+      "format_failure": 16,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 49.877311,
+    "average_latency_ms": 2493.866,
+    "agent": {
+      "llm_turns": 40,
+      "tool_calls": 20,
+      "tool_errors": 7,
+      "no_tool_answers": 0,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 70.0,
+      "raw_result": "Paul ten\u00eda 406 l\u00e1pices al final del a\u00f1o escolar y 336 quedaron sin borradores, por lo que le quedaron 70 borradores.",
+      "outcome": "format_failure",
+      "latency_ms": 1283.191,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1226858667,
+        "load_duration_ns": 3347417,
+        "prompt_eval_count": 670,
+        "prompt_eval_duration_ns": 219221000,
+        "eval_count": 72,
+        "eval_duration_ns": 978396000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "Ryan pasa 1 hora m\u00e1s aprendiendo chino que aprendiendo ingl\u00e9s.",
+      "outcome": "format_failure",
+      "latency_ms": 2497.193917,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2482753750,
+        "load_duration_ns": 1993459,
+        "prompt_eval_count": 644,
+        "prompt_eval_duration_ns": 241939000,
+        "eval_count": 150,
+        "eval_duration_ns": 2223480000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "La respuesta es 4.",
+      "outcome": "format_failure",
+      "latency_ms": 2720.341666,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2704370042,
+        "load_duration_ns": 1811251,
+        "prompt_eval_count": 675,
+        "prompt_eval_duration_ns": 702526000,
+        "eval_count": 139,
+        "eval_duration_ns": 1989365000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "Jack recibi\u00f3 9 correos electr\u00f3nicos m\u00e1s por la ma\u00f1ana que por la tarde.",
+      "outcome": "format_failure",
+      "latency_ms": 1262.026375,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1247341625,
+        "load_duration_ns": 2072416,
+        "prompt_eval_count": 667,
+        "prompt_eval_duration_ns": 641099000,
+        "eval_count": 42,
+        "eval_duration_ns": 590854000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "2",
+      "outcome": "correct",
+      "latency_ms": 4623.171625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4609087582,
+        "load_duration_ns": 2370583,
+        "prompt_eval_count": 789,
+        "prompt_eval_duration_ns": 713219000,
+        "eval_count": 258,
+        "eval_duration_ns": 3877953000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 21.0,
+      "raw_result": "Fred gan\u00f3 -21.0 d\u00f3lares durante el fin de semana.",
+      "outcome": "format_failure",
+      "latency_ms": 854.160583,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 839204875,
+        "load_duration_ns": 2052708,
+        "prompt_eval_count": 682,
+        "prompt_eval_duration_ns": 287682000,
+        "eval_count": 39,
+        "eval_duration_ns": 535812000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 64.0,
+      "raw_result": "La respuesta es 12.",
+      "outcome": "format_failure",
+      "latency_ms": 594.220167,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 579376666,
+        "load_duration_ns": 1679375,
+        "prompt_eval_count": 615,
+        "prompt_eval_duration_ns": 183403000,
+        "eval_count": 29,
+        "eval_duration_ns": 380464000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "La respuesta es 2.",
+      "outcome": "format_failure",
+      "latency_ms": 910.065333,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 896004667,
+        "load_duration_ns": 1807917,
+        "prompt_eval_count": 662,
+        "prompt_eval_duration_ns": 496946000,
+        "eval_count": 29,
+        "eval_duration_ns": 386873000
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 29.0,
+      "raw_result": "203 \u00f7 95 = 2.2",
+      "outcome": "format_failure",
+      "latency_ms": 4796.272833,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4782619292,
+        "load_duration_ns": 3362625,
+        "prompt_eval_count": 791,
+        "prompt_eval_duration_ns": 721428000,
+        "eval_count": 267,
+        "eval_duration_ns": 4044002000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 8.0,
+      "raw_result": "Jack recibi\u00f3 -61 correos electr\u00f3nicos en un d\u00eda.",
+      "outcome": "format_failure",
+      "latency_ms": 751.576791,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 735794125,
+        "load_duration_ns": 2433083,
+        "prompt_eval_count": 658,
+        "prompt_eval_duration_ns": 207848000,
+        "eval_count": 37,
+        "eval_duration_ns": 509404000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 28.0,
+      "raw_result": "9",
+      "outcome": "wrong_answer",
+      "latency_ms": 949.810334,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 936020333,
+        "load_duration_ns": 2592375,
+        "prompt_eval_count": 711,
+        "prompt_eval_duration_ns": 581448000,
+        "eval_count": 24,
+        "eval_duration_ns": 340283000
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "Hay 1 libro m\u00e1s que pel\u00edculas.",
+      "outcome": "format_failure",
+      "latency_ms": 4230.311041,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4217294625,
+        "load_duration_ns": 2726625,
+        "prompt_eval_count": 660,
+        "prompt_eval_duration_ns": 223351000,
+        "eval_count": 266,
+        "eval_duration_ns": 3964788000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "66 / 16 = 4.125",
+      "outcome": "format_failure",
+      "latency_ms": 4737.128208,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4723598584,
+        "load_duration_ns": 3021625,
+        "prompt_eval_count": 807,
+        "prompt_eval_duration_ns": 819350000,
+        "eval_count": 266,
+        "eval_duration_ns": 3888633000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 337.0,
+      "raw_result": "402",
+      "outcome": "wrong_answer",
+      "latency_ms": 3384.461417,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3370799750,
+        "load_duration_ns": 2216917,
+        "prompt_eval_count": 747,
+        "prompt_eval_duration_ns": 400630000,
+        "eval_count": 203,
+        "eval_duration_ns": 2947961000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 101.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 4545.533334,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4527415459,
+        "load_duration_ns": 2499958,
+        "prompt_eval_count": 769,
+        "prompt_eval_duration_ns": 375751000,
+        "eval_count": 254,
+        "eval_duration_ns": 4123592999
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 105.0,
+      "raw_result": "La respuesta es 69.",
+      "outcome": "format_failure",
+      "latency_ms": 715.558417,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 702079000,
+        "load_duration_ns": 2732458,
+        "prompt_eval_count": 703,
+        "prompt_eval_duration_ns": 282671000,
+        "eval_count": 29,
+        "eval_duration_ns": 396093000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 152.0,
+      "raw_result": "{\"name\": \"multiply\", \"parameters\": {\"properties\": {\"a\": \"76\", \"b\": \"204\", \"c\": \"158\", \"d\": \"2\", \"type\": \"object\"}}",
+      "outcome": "format_failure",
+      "latency_ms": 4972.596417,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4960251041,
+        "load_duration_ns": 2398541,
+        "prompt_eval_count": 811,
+        "prompt_eval_duration_ns": 467174000,
+        "eval_count": 300,
+        "eval_duration_ns": 4469705000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "14 \u00f7 2 = 7",
+      "outcome": "format_failure",
+      "latency_ms": 4386.169,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4372366751,
+        "load_duration_ns": 2563250,
+        "prompt_eval_count": 765,
+        "prompt_eval_duration_ns": 387922000,
+        "eval_count": 265,
+        "eval_duration_ns": 3952824000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 210.0,
+      "raw_result": "Faye tiene 29 l\u00e1pices.",
+      "outcome": "format_failure",
+      "latency_ms": 685.110375,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 671534750,
+        "load_duration_ns": 2498417,
+        "prompt_eval_count": 640,
+        "prompt_eval_duration_ns": 212262000,
+        "eval_count": 32,
+        "eval_duration_ns": 439437000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 40.0,
+      "raw_result": "La respuesta es 24.0.",
+      "outcome": "format_failure",
+      "latency_ms": 935.9475,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 921473208,
+        "load_duration_ns": 2370542,
+        "prompt_eval_count": 639,
+        "prompt_eval_duration_ns": 491938000,
+        "eval_count": 31,
+        "eval_duration_ns": 417823000
+      }
+    }
+  ]
+}

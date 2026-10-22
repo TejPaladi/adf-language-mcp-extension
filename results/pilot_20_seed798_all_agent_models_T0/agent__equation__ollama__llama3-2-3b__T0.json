@@ -1,0 +1,507 @@
+{
+  "run_id": "20261021T222151Z",
+  "created_at_utc": "2026-10-21T22:22:40.775414+00:00",
+  "architecture": "mcp_agent",
+  "condition": "author_equation",
+  "provider": "ollama",
+  "model": "llama3.2:3b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "equation",
+    "name": "Canonical equation",
+    "source": "unchanged upstream SVAMP Equation field"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 49.603449
+  },
+  "summary": {
+    "records": 20,
+    "correct": 4,
+    "accuracy_percent": 20.0,
+    "outcomes": {
+      "correct": 4,
+      "wrong_answer": 1,
+      "format_failure": 15,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 49.603449,
+    "average_latency_ms": 2480.172,
+    "agent": {
+      "llm_turns": 49,
+      "tool_calls": 29,
+      "tool_errors": 0,
+      "no_tool_answers": 0,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 70.0,
+      "raw_result": "The result of (406.0 - 336.0) is 70.0.",
+      "outcome": "format_failure",
+      "latency_ms": 4519.37875,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4459374500,
+        "load_duration_ns": 2390644751,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1193350000,
+        "eval_count": 40,
+        "eval_duration_ns": 849211000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 1.0,
+      "raw_result": "The result of (7.0 - 6.0) is 1.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2026.328792,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2011910084,
+        "load_duration_ns": 3400000,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1070979000,
+        "eval_count": 40,
+        "eval_duration_ns": 909955000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 2.0,
+      "raw_result": "2.0",
+      "outcome": "correct",
+      "latency_ms": 2682.250125,
+      "agent_stats": {
+        "llm_turns": 3,
+        "tool_calls": 2,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2656532916,
+        "load_duration_ns": 5202166,
+        "prompt_eval_count": 715,
+        "prompt_eval_duration_ns": 1469542000,
+        "eval_count": 46,
+        "eval_duration_ns": 1150463000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 7.0,
+      "raw_result": "The result of ( 10.0 - 3.0 ) is 7.0.",
+      "outcome": "format_failure",
+      "latency_ms": 1497.360542,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1484519250,
+        "load_duration_ns": 2597542,
+        "prompt_eval_count": 513,
+        "prompt_eval_duration_ns": 374201000,
+        "eval_count": 41,
+        "eval_duration_ns": 1079190000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 2.0,
+      "raw_result": "The result of ( 6.0 - 4.0 ) is 2.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2494.12225,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2479805708,
+        "load_duration_ns": 3254458,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1429843000,
+        "eval_count": 41,
+        "eval_duration_ns": 1023166000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 21.0,
+      "raw_result": "ANSWER: 21.0",
+      "outcome": "format_failure",
+      "latency_ms": 2062.03725,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2047809541,
+        "load_duration_ns": 3296083,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1327344000,
+        "eval_count": 28,
+        "eval_duration_ns": 694132000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "canonical_equation",
+      "gold_answer": 64.0,
+      "raw_result": "The result of (26.0 + 38.0) is 64.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2294.89575,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2279732499,
+        "load_duration_ns": 2754458,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1269967000,
+        "eval_count": 40,
+        "eval_duration_ns": 987759000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 2.0,
+      "raw_result": "The result of ( 30.0 - 28.0 ) is 2.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2392.611,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2378302708,
+        "load_duration_ns": 2926833,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1308380000,
+        "eval_count": 41,
+        "eval_duration_ns": 1047477000
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "canonical_equation",
+      "gold_answer": 29.0,
+      "raw_result": "The result of the division is 29.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2189.956417,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2174379542,
+        "load_duration_ns": 3471875,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1353969000,
+        "eval_count": 32,
+        "eval_duration_ns": 795127000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "canonical_equation",
+      "gold_answer": 8.0,
+      "raw_result": "8.0",
+      "outcome": "correct",
+      "latency_ms": 3332.201416,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3297398083,
+        "load_duration_ns": 5613750,
+        "prompt_eval_count": 907,
+        "prompt_eval_duration_ns": 1548187000,
+        "eval_count": 69,
+        "eval_duration_ns": 1717269000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 28.0,
+      "raw_result": "The result of ( 33.0 - 5.0 ) is 28.0.",
+      "outcome": "format_failure",
+      "latency_ms": 1531.085,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1517885667,
+        "load_duration_ns": 2697208,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 385332000,
+        "eval_count": 41,
+        "eval_duration_ns": 1097655000
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 1.0,
+      "raw_result": "The result of (13.0 - 12.0) is 1.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2473.830292,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2459693291,
+        "load_duration_ns": 3443792,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1441190000,
+        "eval_count": 40,
+        "eval_duration_ns": 990612000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 2.0,
+      "raw_result": "The result of ( 68.0 - 66.0 ) is 2.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2382.758708,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2367613542,
+        "load_duration_ns": 2957750,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1323577000,
+        "eval_count": 41,
+        "eval_duration_ns": 1021134000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 337.0,
+      "raw_result": "The result of (739.0 - 402.0) is 337.0.",
+      "outcome": "format_failure",
+      "latency_ms": 2415.545042,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2400317083,
+        "load_duration_ns": 3826334,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1362847000,
+        "eval_count": 40,
+        "eval_duration_ns": 1008426000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "canonical_equation",
+      "gold_answer": 101.0,
+      "raw_result": "ANSWER: 101.0",
+      "outcome": "format_failure",
+      "latency_ms": 2067.687834,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2052982834,
+        "load_duration_ns": 3280792,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1346101000,
+        "eval_count": 28,
+        "eval_duration_ns": 682742000
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "canonical_equation",
+      "gold_answer": 105.0,
+      "raw_result": "105.0",
+      "outcome": "correct",
+      "latency_ms": 3323.310875,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3288389167,
+        "load_duration_ns": 7061543,
+        "prompt_eval_count": 907,
+        "prompt_eval_duration_ns": 1549876000,
+        "eval_count": 69,
+        "eval_duration_ns": 1699887000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "canonical_equation",
+      "gold_answer": 152.0,
+      "raw_result": "608.0",
+      "outcome": "wrong_answer",
+      "latency_ms": 2474.524958,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2438909292,
+        "load_duration_ns": 6616750,
+        "prompt_eval_count": 895,
+        "prompt_eval_duration_ns": 631637000,
+        "eval_count": 65,
+        "eval_duration_ns": 1768536000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "canonical_equation",
+      "gold_answer": 7.0,
+      "raw_result": "The result of (14.0 / 2.0) is 7.0.",
+      "outcome": "format_failure",
+      "latency_ms": 1530.534625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1516546875,
+        "load_duration_ns": 3162542,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 394108000,
+        "eval_count": 40,
+        "eval_duration_ns": 1089859000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "canonical_equation",
+      "gold_answer": 210.0,
+      "raw_result": "user\n\nQUESTION: ( 210.0 / 2.0 )\nANSWER:",
+      "outcome": "format_failure",
+      "latency_ms": 2458.251,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2444245875,
+        "load_duration_ns": 3322374,
+        "prompt_eval_count": 509,
+        "prompt_eval_duration_ns": 1415183000,
+        "eval_count": 40,
+        "eval_duration_ns": 1000060000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "canonical_equation",
+      "gold_answer": 40.0,
+      "raw_result": "40.0",
+      "outcome": "correct",
+      "latency_ms": 3414.274709,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3378544376,
+        "load_duration_ns": 6102125,
+        "prompt_eval_count": 907,
+        "prompt_eval_duration_ns": 1628270999,
+        "eval_count": 69,
+        "eval_duration_ns": 1716165000
+      }
+    }
+  ]
+}

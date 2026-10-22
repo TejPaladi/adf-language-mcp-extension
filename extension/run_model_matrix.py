@@ -58,6 +58,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=1000)
     parser.add_argument("--sample", choices=("first", "random"), default="first")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--temperatures",
+        nargs="+",
+        type=float,
+        help="Temperatures to run. Defaults to the upstream temperature list.",
+    )
     parser.add_argument("--translations-dir", type=Path, default=ROOT / "data" / "multilingual_svamp")
     parser.add_argument("--results-dir", type=Path, default=ROOT / "results" / "matrix_runs")
     parser.add_argument("--python", type=Path, default=Path(sys.executable), help="Python interpreter for child runs.")
@@ -100,12 +106,14 @@ def build_jobs(
     provider: str,
     languages: list[str],
     results_dir: Path,
+    temperatures: list[float] | None = None,
 ) -> list[Job]:
     """Build every condition/model/temperature combination without running it."""
 
     architectures = ("direct", "agent") if architecture == "all" else (architecture,)
     providers = ("groq", "ollama") if provider == "all" else (provider,)
     jobs: list[Job] = []
+    local_temperatures = [float(value) for value in (temperatures or config["temperatures"])]
     for current_architecture in architectures:
         for current_provider in providers:
             if current_provider == "groq":
@@ -114,13 +122,13 @@ def build_jobs(
                 model_temperatures = [
                     (model, float(temperature))
                     for model in config["ollama_models"]
-                    for temperature in config["temperatures"]
+                    for temperature in local_temperatures
                 ]
             else:
                 model_temperatures = [
                     (model, float(temperature))
                     for model in config["ollama_agent_models"]
-                    for temperature in config["temperatures"]
+                    for temperature in local_temperatures
                 ]
 
             for model, temperature in model_temperatures:
@@ -257,6 +265,7 @@ def main() -> None:
         provider=args.provider,
         languages=languages,
         results_dir=args.results_dir,
+        temperatures=args.temperatures,
     )
     if args.skip_model:
         skipped = set(args.skip_model)

@@ -1,0 +1,508 @@
+{
+  "run_id": "20261021T222241Z",
+  "created_at_utc": "2026-10-21T22:23:22.541792+00:00",
+  "architecture": "mcp_agent",
+  "condition": "language_extension",
+  "provider": "ollama",
+  "model": "llama3.2:3b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "en",
+    "name": "English",
+    "source": "unchanged upstream SVAMP Body and Question fields",
+    "canonical_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 41.241389
+  },
+  "summary": {
+    "records": 20,
+    "correct": 0,
+    "accuracy_percent": 0.0,
+    "outcomes": {
+      "correct": 0,
+      "wrong_answer": 0,
+      "format_failure": 20,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 41.241389,
+    "average_latency_ms": 2062.069,
+    "agent": {
+      "llm_turns": 37,
+      "tool_calls": 17,
+      "tool_errors": 0,
+      "no_tool_answers": 3,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 70.0,
+      "raw_result": "He had 265 more erasers than crayons left.",
+      "outcome": "format_failure",
+      "latency_ms": 2806.485375,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2747157958,
+        "load_duration_ns": 4506292,
+        "prompt_eval_count": 662,
+        "prompt_eval_duration_ns": 2052902000,
+        "eval_count": 29,
+        "eval_duration_ns": 660368000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "Ryan spends 1 hour more on learning chinese than he does on learning english.",
+      "outcome": "format_failure",
+      "latency_ms": 2327.45125,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2312292958,
+        "load_duration_ns": 3204042,
+        "prompt_eval_count": 621,
+        "prompt_eval_duration_ns": 1467034000,
+        "eval_count": 33,
+        "eval_duration_ns": 817672000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "She put in 4 cups of flour.",
+      "outcome": "format_failure",
+      "latency_ms": 2313.62,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2300042834,
+        "load_duration_ns": 2091251,
+        "prompt_eval_count": 659,
+        "prompt_eval_duration_ns": 1625445000,
+        "eval_count": 26,
+        "eval_duration_ns": 654197000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "Jack received 7 more emails in the morning than in the afternoon.",
+      "outcome": "format_failure",
+      "latency_ms": 2280.878459,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2267330624,
+        "load_duration_ns": 2896958,
+        "prompt_eval_count": 635,
+        "prompt_eval_duration_ns": 1494171000,
+        "eval_count": 31,
+        "eval_duration_ns": 747921000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "The difference between the number of kids Julia played with on Monday and Wednesday is 2.",
+      "outcome": "format_failure",
+      "latency_ms": 2436.60925,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2422429083,
+        "load_duration_ns": 3095125,
+        "prompt_eval_count": 639,
+        "prompt_eval_duration_ns": 1522173000,
+        "eval_count": 35,
+        "eval_duration_ns": 866394000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 21.0,
+      "raw_result": "Fred earned 21 dollars over the weekend.",
+      "outcome": "format_failure",
+      "latency_ms": 2265.902042,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2250858000,
+        "load_duration_ns": 3445250,
+        "prompt_eval_count": 639,
+        "prompt_eval_duration_ns": 1603434000,
+        "eval_count": 26,
+        "eval_duration_ns": 622625000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 64.0,
+      "raw_result": "There are 64 children on the bus now.",
+      "outcome": "format_failure",
+      "latency_ms": 2174.771,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2158444000,
+        "load_duration_ns": 4123124,
+        "prompt_eval_count": 611,
+        "prompt_eval_duration_ns": 1456322000,
+        "eval_count": 27,
+        "eval_duration_ns": 669745000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "The grocery store had 2 bottles of diet soda.",
+      "outcome": "format_failure",
+      "latency_ms": 2301.151416,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2284702667,
+        "load_duration_ns": 4050125,
+        "prompt_eval_count": 627,
+        "prompt_eval_duration_ns": 1565403000,
+        "eval_count": 28,
+        "eval_duration_ns": 681356000
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 29.0,
+      "raw_result": "Each group of bananas is 29.0 units.",
+      "outcome": "format_failure",
+      "latency_ms": 2235.073334,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2213466125,
+        "load_duration_ns": 3384917,
+        "prompt_eval_count": 631,
+        "prompt_eval_duration_ns": 1488541000,
+        "eval_count": 28,
+        "eval_duration_ns": 683328000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 8.0,
+      "raw_result": "Jack received 8 emails in the day.",
+      "outcome": "format_failure",
+      "latency_ms": 2219.591292,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2204273208,
+        "load_duration_ns": 2509875,
+        "prompt_eval_count": 625,
+        "prompt_eval_duration_ns": 1531634000,
+        "eval_count": 26,
+        "eval_duration_ns": 640930000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 28.0,
+      "raw_result": "{\"name\":\"subtract\",\"parameters\":{\"a\":24,\"b\":33+24}}",
+      "outcome": "format_failure",
+      "latency_ms": 1763.661125,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1758789417,
+        "load_duration_ns": 707417,
+        "prompt_eval_count": 446,
+        "prompt_eval_duration_ns": 1305786000,
+        "eval_count": 18,
+        "eval_duration_ns": 449451000
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "You have read 2 more books than movies.",
+      "outcome": "format_failure",
+      "latency_ms": 1234.635209,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1219610792,
+        "load_duration_ns": 3572251,
+        "prompt_eval_count": 643,
+        "prompt_eval_duration_ns": 536121000,
+        "eval_count": 27,
+        "eval_duration_ns": 642489000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "{\"name\":\"subtract\",\"parameters{\"a\":68,\"b\":16}}",
+      "outcome": "format_failure",
+      "latency_ms": 1693.226459,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1688988667,
+        "load_duration_ns": 1706750,
+        "prompt_eval_count": 431,
+        "prompt_eval_duration_ns": 1264671000,
+        "eval_count": 16,
+        "eval_duration_ns": 416622000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 337.0,
+      "raw_result": "There are 337 boys in the school.",
+      "outcome": "format_failure",
+      "latency_ms": 1211.381291,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1195493292,
+        "load_duration_ns": 3234042,
+        "prompt_eval_count": 607,
+        "prompt_eval_duration_ns": 537580000,
+        "eval_count": 26,
+        "eval_duration_ns": 617349000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 101.0,
+      "raw_result": "{\"name\":\"subtract\",\"parameters{\"a\":132,\"b\":101}}",
+      "outcome": "format_failure",
+      "latency_ms": 1649.8155,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1645347541,
+        "load_duration_ns": 1940250,
+        "prompt_eval_count": 422,
+        "prompt_eval_duration_ns": 1229504000,
+        "eval_count": 16,
+        "eval_duration_ns": 406842000
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 105.0,
+      "raw_result": "There are 105 bird families living near the mountain now.",
+      "outcome": "format_failure",
+      "latency_ms": 1304.128125,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1289557291,
+        "load_duration_ns": 3344500,
+        "prompt_eval_count": 639,
+        "prompt_eval_duration_ns": 551290000,
+        "eval_count": 29,
+        "eval_duration_ns": 702073000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 152.0,
+      "raw_result": "The Razorback shop made $152 from selling the jerseys.",
+      "outcome": "format_failure",
+      "latency_ms": 2327.320042,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2312872041,
+        "load_duration_ns": 3173042,
+        "prompt_eval_count": 651,
+        "prompt_eval_duration_ns": 1568089000,
+        "eval_count": 29,
+        "eval_duration_ns": 714725000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "Each of the 2 guests had 7 cookies.",
+      "outcome": "format_failure",
+      "latency_ms": 2299.221708,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2284161125,
+        "load_duration_ns": 3427875,
+        "prompt_eval_count": 617,
+        "prompt_eval_duration_ns": 1567655000,
+        "eval_count": 28,
+        "eval_duration_ns": 684804000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 210.0,
+      "raw_result": "Faye has 210 crayons.",
+      "outcome": "format_failure",
+      "latency_ms": 2134.876625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2118864834,
+        "load_duration_ns": 3765626,
+        "prompt_eval_count": 619,
+        "prompt_eval_duration_ns": 1472276000,
+        "eval_count": 25,
+        "eval_duration_ns": 607111000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 40.0,
+      "raw_result": "The total weight of their strawberries is 40 pounds.",
+      "outcome": "format_failure",
+      "latency_ms": 2221.054167,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2206291958,
+        "load_duration_ns": 3868417,
+        "prompt_eval_count": 615,
+        "prompt_eval_duration_ns": 1497530000,
+        "eval_count": 28,
+        "eval_duration_ns": 678532000
+      }
+    }
+  ]
+}

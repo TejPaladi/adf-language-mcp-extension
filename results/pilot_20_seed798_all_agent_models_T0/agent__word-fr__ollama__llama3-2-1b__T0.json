@@ -1,0 +1,530 @@
+{
+  "run_id": "20261021T221424Z",
+  "created_at_utc": "2026-10-21T22:15:11.237480+00:00",
+  "architecture": "mcp_agent",
+  "condition": "language_extension",
+  "provider": "ollama",
+  "model": "llama3.2:1b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "fr",
+    "name": "French",
+    "source": "data/multilingual_svamp/svamp_fr.json",
+    "file_sha256": "6939065b58eed710e6375e9f71b32f7e0d4299b61907cd182ad30283c23d456a",
+    "canonical_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+    "translation_metadata": {
+      "language": "fr",
+      "source_language": "en",
+      "source_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+      "translation_method": {
+        "backend": "NLLB",
+        "model": "facebook/nllb-200-distilled-600M",
+        "source_language_code": "eng_Latn",
+        "target_language_code": "fra_Latn",
+        "numeric_literals": "Protected before translation and restored verbatim afterward.",
+        "batch_size": 8,
+        "max_new_tokens": 256,
+        "device": "mps",
+        "generated_at_utc": "2026-10-15T13:12:43.072762+00:00",
+        "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "completed_records": 1000,
+      "expected_records": 1000,
+      "review_status": "machine-generated; human review required before evaluation"
+    },
+    "translation_use": "preliminary_machine_translated"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 46.814453
+  },
+  "summary": {
+    "records": 20,
+    "correct": 0,
+    "accuracy_percent": 0.0,
+    "outcomes": {
+      "correct": 0,
+      "wrong_answer": 3,
+      "format_failure": 17,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 46.814453,
+    "average_latency_ms": 2340.723,
+    "agent": {
+      "llm_turns": 40,
+      "tool_calls": 20,
+      "tool_errors": 2,
+      "no_tool_answers": 0,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 70.0,
+      "raw_result": "Paul a 601 - 406 = 195 crayons de plus qu'il n'avait \u00e0 lui.",
+      "outcome": "format_failure",
+      "latency_ms": 880.455584,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 842245875,
+        "load_duration_ns": 3187375,
+        "prompt_eval_count": 674,
+        "prompt_eval_duration_ns": 213485000,
+        "eval_count": 45,
+        "eval_duration_ns": 608615000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "Il passe 1 heure moins \u00e0 apprendre le chinois qu'\u00e0 apprendre l'anglais.",
+      "outcome": "format_failure",
+      "latency_ms": 4456.532,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4441678959,
+        "load_duration_ns": 1913959,
+        "prompt_eval_count": 670,
+        "prompt_eval_duration_ns": 270034000,
+        "eval_count": 280,
+        "eval_duration_ns": 4153649000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "Mary a mis 5 tasses de farine.",
+      "outcome": "format_failure",
+      "latency_ms": 775.357959,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 761511375,
+        "load_duration_ns": 1897791,
+        "prompt_eval_count": 679,
+        "prompt_eval_duration_ns": 276836000,
+        "eval_count": 34,
+        "eval_duration_ns": 467721000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "La r\u00e9ponse finale est 9.",
+      "outcome": "format_failure",
+      "latency_ms": 4468.00275,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4452654333,
+        "load_duration_ns": 2281333,
+        "prompt_eval_count": 683,
+        "prompt_eval_duration_ns": 590848000,
+        "eval_count": 264,
+        "eval_duration_ns": 3847018000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "Julia a jou\u00e9 avec 11 enfants lundi et mercredi.",
+      "outcome": "format_failure",
+      "latency_ms": 4576.276625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4560801668,
+        "load_duration_ns": 2775751,
+        "prompt_eval_count": 664,
+        "prompt_eval_duration_ns": 598985000,
+        "eval_count": 273,
+        "eval_duration_ns": 3944339000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 21.0,
+      "raw_result": "Fred a gagn\u00e9 21 dollars le week-end.",
+      "outcome": "format_failure",
+      "latency_ms": 1108.587792,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1097873792,
+        "load_duration_ns": 1928459,
+        "prompt_eval_count": 674,
+        "prompt_eval_duration_ns": 595981000,
+        "eval_count": 35,
+        "eval_duration_ns": 492348000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 64.0,
+      "raw_result": "Il y a 12 enfants restants dans le bus.",
+      "outcome": "format_failure",
+      "latency_ms": 945.400084,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 930833792,
+        "load_duration_ns": 1989876,
+        "prompt_eval_count": 620,
+        "prompt_eval_duration_ns": 449411000,
+        "eval_count": 35,
+        "eval_duration_ns": 470698000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "Il y a 2 bouteilles de soda di\u00e9t\u00e9tique.",
+      "outcome": "format_failure",
+      "latency_ms": 1219.535791,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1205920709,
+        "load_duration_ns": 1652916,
+        "prompt_eval_count": 674,
+        "prompt_eval_duration_ns": 513145000,
+        "eval_count": 50,
+        "eval_duration_ns": 682698000
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 29.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 4593.340583,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4579100709,
+        "load_duration_ns": 1925917,
+        "prompt_eval_count": 787,
+        "prompt_eval_duration_ns": 684965000,
+        "eval_count": 258,
+        "eval_duration_ns": 3877000000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 8.0,
+      "raw_result": "Jack a re\u00e7u 61 courriels par jour.",
+      "outcome": "format_failure",
+      "latency_ms": 787.383792,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 774014167,
+        "load_duration_ns": 2031209,
+        "prompt_eval_count": 667,
+        "prompt_eval_duration_ns": 278096000,
+        "eval_count": 35,
+        "eval_duration_ns": 481768000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 28.0,
+      "raw_result": "La souris a saut\u00e9 9 centim\u00e8tres de plus que le sauterelle.",
+      "outcome": "format_failure",
+      "latency_ms": 1182.770333,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1169213167,
+        "load_duration_ns": 2131834,
+        "prompt_eval_count": 722,
+        "prompt_eval_duration_ns": 567410000,
+        "eval_count": 43,
+        "eval_duration_ns": 590648000
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 2117.6985,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2105581751,
+        "load_duration_ns": 2030459,
+        "prompt_eval_count": 653,
+        "prompt_eval_duration_ns": 202390000,
+        "eval_count": 134,
+        "eval_duration_ns": 1888202000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "Danny avait 66 enveloppes et 39 bouteilles au d\u00e9but. Pour trouver le nombre d'emballages, on peut diviser le nombre d'enveloppes par le nombre de bouteilles :\n\n66 enveloppes / 16 bouteilles = 4,0625\n\nPuisque l'on ne peut pas avoir un nombre de parties fractionnaire, on peut convertir ce r\u00e9sultat en nombre entier en le poussant vers la gauche :\n\n4,0625 \u00d7 100 = 406,25\n\nDonc Danny avait 406 enveloppes et 16 bouteilles au d\u00e9but. Pour trouver le nombre d'emballages, on peut diviser le nombre d'enveloppes par le nombre de bouteilles :\n\n406 enveloppes / 16 bouteilles = 25,0625\n\nPuisque l'on ne peut pas avoir un nombre de parties fractionnaire, on peut convertir ce r\u00e9sultat en nombre entier en le poussant vers la gauche :\n\n25,0625 \u00d7 100 = 2500\n\nDonc Danny avait 2500 emballages au d\u00e9but.",
+      "outcome": "format_failure",
+      "latency_ms": 4347.101833,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4332195291,
+        "load_duration_ns": 2333666,
+        "prompt_eval_count": 666,
+        "prompt_eval_duration_ns": 620602000,
+        "eval_count": 251,
+        "eval_duration_ns": 3698560000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 337.0,
+      "raw_result": "La r\u00e9ponse est 337.",
+      "outcome": "format_failure",
+      "latency_ms": 3246.155333,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3230300041,
+        "load_duration_ns": 2657416,
+        "prompt_eval_count": 654,
+        "prompt_eval_duration_ns": 254649000,
+        "eval_count": 200,
+        "eval_duration_ns": 2943673000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 101.0,
+      "raw_result": "Donc Kelly doit donner 101 jeux de Sony.",
+      "outcome": "format_failure",
+      "latency_ms": 3656.417084,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3643150583,
+        "load_duration_ns": 2658124,
+        "prompt_eval_count": 642,
+        "prompt_eval_duration_ns": 592325000,
+        "eval_count": 209,
+        "eval_duration_ns": 3035734000
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 105.0,
+      "raw_result": "Il y a 69 familles d'oiseaux restantes.",
+      "outcome": "format_failure",
+      "latency_ms": 1191.501458,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1178375457,
+        "load_duration_ns": 2025666,
+        "prompt_eval_count": 702,
+        "prompt_eval_duration_ns": 640684000,
+        "eval_count": 37,
+        "eval_duration_ns": 525767000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 152.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 4302.684958,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4288984874,
+        "load_duration_ns": 1961666,
+        "prompt_eval_count": 843,
+        "prompt_eval_duration_ns": 494581000,
+        "eval_count": 254,
+        "eval_duration_ns": 3773136000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "La m\u00e8re de Brenda a fait 14 biscuits pour 2, donc chaque personne a 14/2 = 7 biscuits.",
+      "outcome": "format_failure",
+      "latency_ms": 936.478375,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 926219375,
+        "load_duration_ns": 2285958,
+        "prompt_eval_count": 627,
+        "prompt_eval_duration_ns": 216617000,
+        "eval_count": 50,
+        "eval_duration_ns": 695383000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 210.0,
+      "raw_result": "Faye a 6 crayons de moins que le nombre total de crayons.",
+      "outcome": "format_failure",
+      "latency_ms": 1028.347,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1015227292,
+        "load_duration_ns": 1909500,
+        "prompt_eval_count": 634,
+        "prompt_eval_duration_ns": 459597000,
+        "eval_count": 40,
+        "eval_duration_ns": 545639000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 40.0,
+      "raw_result": "Les fraises pesaient 24 livres ensemble.",
+      "outcome": "format_failure",
+      "latency_ms": 951.72725,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 937930916,
+        "load_duration_ns": 1480541,
+        "prompt_eval_count": 644,
+        "prompt_eval_duration_ns": 451710000,
+        "eval_count": 35,
+        "eval_duration_ns": 477430000
+      }
+    }
+  ]
+}

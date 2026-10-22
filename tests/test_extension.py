@@ -161,6 +161,25 @@ class ModelMatrixTests(unittest.TestCase):
         self.assertTrue(any(job.architecture == "agent" and job.model == "qwen3.5:4b" for job in jobs))
         self.assertFalse(any(job.architecture == "direct" and job.model == "qwen3.5:4b" for job in jobs))
 
+    def test_temperature_filter_builds_one_agent_job_per_condition(self) -> None:
+        config = {
+            "model": "openai/gpt-oss-20b",
+            "temperature": 0.7,
+            "temperatures": [0.0, 0.7],
+            "ollama_models": ["direct-model"],
+            "ollama_agent_models": ["agent-model"],
+        }
+        jobs = build_jobs(
+            config,
+            architecture="agent",
+            provider="ollama",
+            languages=["en", "es"],
+            results_dir=Path("results"),
+            temperatures=[0.0],
+        )
+        self.assertEqual(len(jobs), 3)
+        self.assertEqual({job.temperature for job in jobs}, {0.0})
+
 
 class SamplingTests(unittest.TestCase):
     def test_random_sample_is_reproducible_and_has_no_duplicate_rows(self) -> None:

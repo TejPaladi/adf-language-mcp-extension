@@ -1,0 +1,530 @@
+{
+  "run_id": "20261021T222016Z",
+  "created_at_utc": "2026-10-21T22:21:05.817545+00:00",
+  "architecture": "mcp_agent",
+  "condition": "language_extension",
+  "provider": "ollama",
+  "model": "phi4-mini:3.8b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "ru",
+    "name": "Russian",
+    "source": "data/multilingual_svamp/svamp_ru.json",
+    "file_sha256": "3e3ea12cada0b6d278b0af8cc89ab77c5ca0212b9054df13b98927b651fa17f4",
+    "canonical_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+    "translation_metadata": {
+      "language": "ru",
+      "source_language": "en",
+      "source_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+      "translation_method": {
+        "backend": "NLLB",
+        "model": "facebook/nllb-200-distilled-600M",
+        "source_language_code": "eng_Latn",
+        "target_language_code": "rus_Cyrl",
+        "numeric_literals": "Protected before translation and restored verbatim afterward.",
+        "batch_size": 8,
+        "max_new_tokens": 256,
+        "device": "mps",
+        "generated_at_utc": "2026-10-15T13:18:07.813823+00:00",
+        "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "completed_records": 1000,
+      "expected_records": 1000,
+      "review_status": "machine-generated; human review required before evaluation"
+    },
+    "translation_use": "preliminary_machine_translated"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 49.483792
+  },
+  "summary": {
+    "records": 20,
+    "correct": 0,
+    "accuracy_percent": 0.0,
+    "outcomes": {
+      "correct": 0,
+      "wrong_answer": 2,
+      "format_failure": 18,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 49.483792,
+    "average_latency_ms": 2474.19,
+    "agent": {
+      "llm_turns": 20,
+      "tool_calls": 0,
+      "tool_errors": 0,
+      "no_tool_answers": 20,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 70.0,
+      "raw_result": "[{\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":601,\"b\":336}}},{\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":406,\"b\":336}}},{\"type\":\"add\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"a\":result1,\"b\":result2}}}]",
+      "outcome": "format_failure",
+      "latency_ms": 3750.100583,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3744851959,
+        "load_duration_ns": 2369584,
+        "prompt_eval_count": 343,
+        "prompt_eval_duration_ns": 272941000,
+        "eval_count": 100,
+        "eval_duration_ns": 3456092000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "subtract(7, 6)",
+      "outcome": "format_failure",
+      "latency_ms": 643.812792,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 639162166,
+        "load_duration_ns": 1831500,
+        "prompt_eval_count": 336,
+        "prompt_eval_duration_ns": 347801000,
+        "eval_count": 8,
+        "eval_duration_ns": 277973000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "7",
+      "outcome": "wrong_answer",
+      "latency_ms": 335.573375,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 331183875,
+        "load_duration_ns": 794459,
+        "prompt_eval_count": 346,
+        "prompt_eval_duration_ns": 287546000,
+        "eval_count": 2,
+        "eval_duration_ns": 38496000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "[{\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":12,\"b\":44}}}]",
+      "outcome": "format_failure",
+      "latency_ms": 1475.598584,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1471481333,
+        "load_duration_ns": 829000,
+        "prompt_eval_count": 343,
+        "prompt_eval_duration_ns": 282920000,
+        "eval_count": 35,
+        "eval_duration_ns": 1182957000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "subtract(6, 4)",
+      "outcome": "format_failure",
+      "latency_ms": 581.398083,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 577068708,
+        "load_duration_ns": 1584291,
+        "prompt_eval_count": 341,
+        "prompt_eval_duration_ns": 302740000,
+        "eval_count": 8,
+        "eval_duration_ns": 262820000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 21.0,
+      "raw_result": "[{\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":19,\"b\":40}}},{\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":16,\"b\":69}}},{\"type\":\"add\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"a\":-21,\"b\":-53}}}]",
+      "outcome": "format_failure",
+      "latency_ms": 4056.427292,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4051109292,
+        "load_duration_ns": 1097667,
+        "prompt_eval_count": 358,
+        "prompt_eval_duration_ns": 417161000,
+        "eval_count": 100,
+        "eval_duration_ns": 3626624000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 64.0,
+      "raw_result": "subtract(38, 26)",
+      "outcome": "format_failure",
+      "latency_ms": 464.338708,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 459705958,
+        "load_duration_ns": 2026791,
+        "prompt_eval_count": 314,
+        "prompt_eval_duration_ns": 171480000,
+        "eval_count": 8,
+        "eval_duration_ns": 273932000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "subtract(28, 30)",
+      "outcome": "format_failure",
+      "latency_ms": 569.006959,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 564525792,
+        "load_duration_ns": 785000,
+        "prompt_eval_count": 333,
+        "prompt_eval_duration_ns": 293597000,
+        "eval_count": 8,
+        "eval_duration_ns": 265769999
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 29.0,
+      "raw_result": "divide(203, 7)",
+      "outcome": "format_failure",
+      "latency_ms": 549.850084,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 545423708,
+        "load_duration_ns": 592333,
+        "prompt_eval_count": 339,
+        "prompt_eval_duration_ns": 282132000,
+        "eval_count": 8,
+        "eval_duration_ns": 258747000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 8.0,
+      "raw_result": "[{\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":64,\"b\":5}}}, {\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":54,\"b\":3}}}, {\"type\":\"add\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"a\":41,\"b\":0}}}]",
+      "outcome": "format_failure",
+      "latency_ms": 3982.655666,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3978101667,
+        "load_duration_ns": 617167,
+        "prompt_eval_count": 338,
+        "prompt_eval_duration_ns": 280245000,
+        "eval_count": 100,
+        "eval_duration_ns": 3693090000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 28.0,
+      "raw_result": "{\"type\":\"subtract\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":33,\"b\":24}}",
+      "outcome": "format_failure",
+      "latency_ms": 2728.252583,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2724275708,
+        "load_duration_ns": 1559708,
+        "prompt_eval_count": 353,
+        "prompt_eval_duration_ns": 441685000,
+        "eval_count": 63,
+        "eval_duration_ns": 2268464000
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "subtract(13, 12)",
+      "outcome": "format_failure",
+      "latency_ms": 599.302042,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 595401875,
+        "load_duration_ns": 1551875,
+        "prompt_eval_count": 338,
+        "prompt_eval_duration_ns": 311057000,
+        "eval_count": 8,
+        "eval_duration_ns": 274685000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "66",
+      "outcome": "wrong_answer",
+      "latency_ms": 341.616375,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 337132500,
+        "load_duration_ns": 734667,
+        "prompt_eval_count": 342,
+        "prompt_eval_duration_ns": 292866000,
+        "eval_count": 2,
+        "eval_duration_ns": 39233000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 337.0,
+      "raw_result": "{\"type\":\"function\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":739,\"b\":402}}\n\n{\"type\":\"function\",\"function\":{\"name\":\"divide\",\"description\":\"Divide a by b: a / b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":739,\"b\":402}}",
+      "outcome": "format_failure",
+      "latency_ms": 4851.365292,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4846613750,
+        "load_duration_ns": 631417,
+        "prompt_eval_count": 314,
+        "prompt_eval_duration_ns": 155972000,
+        "eval_count": 125,
+        "eval_duration_ns": 4685918000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 101.0,
+      "raw_result": "add(46, 132) - 31",
+      "outcome": "format_failure",
+      "latency_ms": 705.686125,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 701320250,
+        "load_duration_ns": 1960750,
+        "prompt_eval_count": 327,
+        "prompt_eval_duration_ns": 305116000,
+        "eval_count": 11,
+        "eval_duration_ns": 381305000
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 105.0,
+      "raw_result": "add(87, 18)",
+      "outcome": "format_failure",
+      "latency_ms": 684.430458,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 680189250,
+        "load_duration_ns": 741250,
+        "prompt_eval_count": 355,
+        "prompt_eval_duration_ns": 412947000,
+        "eval_count": 8,
+        "eval_duration_ns": 262172000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 152.0,
+      "raw_result": "{\"type\":\"function\",\"function\":{\"name\":\"multiply\",\"description\":\"Multiply two numbers: a * b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":204,\"b\":158}} {\"type\":\"function\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":$123.60,\"b\":$0.00}} {\"type\":\"function\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":$123.60,\"b\":$0.00}} {\"type\":\"function\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":$123.60,\"b",
+      "outcome": "format_failure",
+      "latency_ms": 10002.414125,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 9997601042,
+        "load_duration_ns": 671125,
+        "prompt_eval_count": 362,
+        "prompt_eval_duration_ns": 415749000,
+        "eval_count": 256,
+        "eval_duration_ns": 9576935000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "{\"type\":\"function\",\"function\":{\"name\":\"divide\",\"description\":\"Divide two numbers: a / b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}},\"arguments\":{\"a\":14,\"b\":2}}",
+      "outcome": "format_failure",
+      "latency_ms": 2625.554875,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2621183167,
+        "load_duration_ns": 1863084,
+        "prompt_eval_count": 325,
+        "prompt_eval_duration_ns": 295372000,
+        "eval_count": 62,
+        "eval_duration_ns": 2281629000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 210.0,
+      "raw_result": "[{\"type\":\"function\",\"function\":{\"name\":\"multiply\",\"description\":\"Multiply two numbers: a * b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}}},{{\"type\":\"function\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}}},{{\"type\":\"function\",\"function\":{\"name\":\"multiply\",\"description\":\"Multiply two numbers: a * b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}}},{{\"type\":\"function\",\"function\":{\"name\":\"multiply\",\"description\":\"Multiply two numbers: a * b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}}},{{\"type\":\"function\",\"function\":{\"name\":\"add\",\"description\":\"Add two numbers: a + b\",\"parameters\":{\"type\":\"object\",\"required\":[\"a\",\"b\"],\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}}}}}]",
+      "outcome": "format_failure",
+      "latency_ms": 10090.193042,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 10085402667,
+        "load_duration_ns": 1952584,
+        "prompt_eval_count": 331,
+        "prompt_eval_duration_ns": 303050000,
+        "eval_count": 256,
+        "eval_duration_ns": 9768212000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 40.0,
+      "raw_result": "32 kilograms",
+      "outcome": "format_failure",
+      "latency_ms": 401.134958,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 396337042,
+        "load_duration_ns": 2317250,
+        "prompt_eval_count": 329,
+        "prompt_eval_duration_ns": 286491000,
+        "eval_count": 3,
+        "eval_duration_ns": 78090000
+      }
+    }
+  ]
+}

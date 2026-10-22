@@ -1,0 +1,530 @@
+{
+  "run_id": "20261021T225356Z",
+  "created_at_utc": "2026-10-21T22:54:29.476343+00:00",
+  "architecture": "mcp_agent",
+  "condition": "language_extension",
+  "provider": "ollama",
+  "model": "granite4:3b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "es",
+    "name": "Spanish",
+    "source": "data/multilingual_svamp/svamp_es.json",
+    "file_sha256": "3368abfb65d69ab1a6fd3bab579bf0d250adcb8dd7cd0face611a21c07141288",
+    "canonical_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+    "translation_metadata": {
+      "language": "es",
+      "source_language": "en",
+      "source_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30",
+      "translation_method": {
+        "backend": "NLLB",
+        "model": "facebook/nllb-200-distilled-600M",
+        "source_language_code": "eng_Latn",
+        "target_language_code": "spa_Latn",
+        "numeric_literals": "Protected before translation and restored verbatim afterward.",
+        "batch_size": 8,
+        "max_new_tokens": 256,
+        "device": "mps",
+        "generated_at_utc": "2026-10-15T13:25:10.962408+00:00",
+        "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      },
+      "completed_records": 1000,
+      "expected_records": 1000,
+      "review_status": "machine-generated; human review required before evaluation"
+    },
+    "translation_use": "preliminary_machine_translated"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 32.487732
+  },
+  "summary": {
+    "records": 20,
+    "correct": 11,
+    "accuracy_percent": 55.0,
+    "outcomes": {
+      "correct": 11,
+      "wrong_answer": 8,
+      "format_failure": 1,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 32.487732,
+    "average_latency_ms": 1624.387,
+    "agent": {
+      "llm_turns": 45,
+      "tool_calls": 25,
+      "tool_errors": 0,
+      "no_tool_answers": 0,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 70.0,
+      "raw_result": "70",
+      "outcome": "correct",
+      "latency_ms": 2178.033208,
+      "agent_stats": {
+        "llm_turns": 3,
+        "tool_calls": 2,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2118065334,
+        "load_duration_ns": 6756209,
+        "prompt_eval_count": 1500,
+        "prompt_eval_duration_ns": 625153000,
+        "eval_count": 57,
+        "eval_duration_ns": 1457996000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "1",
+      "outcome": "correct",
+      "latency_ms": 1360.940917,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1345746500,
+        "load_duration_ns": 3503125,
+        "prompt_eval_count": 935,
+        "prompt_eval_duration_ns": 389661000,
+        "eval_count": 35,
+        "eval_duration_ns": 937796000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "18",
+      "outcome": "wrong_answer",
+      "latency_ms": 1484.304334,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1467971500,
+        "load_duration_ns": 3536126,
+        "prompt_eval_count": 967,
+        "prompt_eval_duration_ns": 517131000,
+        "eval_count": 35,
+        "eval_duration_ns": 932177000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "**Answer:** 7",
+      "outcome": "format_failure",
+      "latency_ms": 1566.109708,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1552142584,
+        "load_duration_ns": 3338500,
+        "prompt_eval_count": 959,
+        "prompt_eval_duration_ns": 497845000,
+        "eval_count": 39,
+        "eval_duration_ns": 1036310000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "2",
+      "outcome": "correct",
+      "latency_ms": 1361.333167,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1348285958,
+        "load_duration_ns": 3513500,
+        "prompt_eval_count": 945,
+        "prompt_eval_duration_ns": 404298000,
+        "eval_count": 35,
+        "eval_duration_ns": 926273000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 21.0,
+      "raw_result": "53",
+      "outcome": "wrong_answer",
+      "latency_ms": 1477.094792,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1463512791,
+        "load_duration_ns": 3650541,
+        "prompt_eval_count": 973,
+        "prompt_eval_duration_ns": 505818000,
+        "eval_count": 35,
+        "eval_duration_ns": 938288000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 64.0,
+      "raw_result": "64",
+      "outcome": "correct",
+      "latency_ms": 1343.796375,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1329405666,
+        "load_duration_ns": 3433792,
+        "prompt_eval_count": 907,
+        "prompt_eval_duration_ns": 382467000,
+        "eval_count": 35,
+        "eval_duration_ns": 928948000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "2",
+      "outcome": "correct",
+      "latency_ms": 1367.376333,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1353072417,
+        "load_duration_ns": 4257751,
+        "prompt_eval_count": 953,
+        "prompt_eval_duration_ns": 393417000,
+        "eval_count": 35,
+        "eval_duration_ns": 938682000
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 29.0,
+      "raw_result": "2.136842105263158",
+      "outcome": "wrong_answer",
+      "latency_ms": 1548.238875,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1532816626,
+        "load_duration_ns": 3514626,
+        "prompt_eval_count": 951,
+        "prompt_eval_duration_ns": 399423000,
+        "eval_count": 41,
+        "eval_duration_ns": 1114767000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 8.0,
+      "raw_result": "8",
+      "outcome": "correct",
+      "latency_ms": 1394.68625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1380287084,
+        "load_duration_ns": 4810375,
+        "prompt_eval_count": 949,
+        "prompt_eval_duration_ns": 419143000,
+        "eval_count": 35,
+        "eval_duration_ns": 940104000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 28.0,
+      "raw_result": "9",
+      "outcome": "wrong_answer",
+      "latency_ms": 1485.199709,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1470885459,
+        "load_duration_ns": 3308792,
+        "prompt_eval_count": 1003,
+        "prompt_eval_duration_ns": 516525000,
+        "eval_count": 35,
+        "eval_duration_ns": 936669000
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "-2",
+      "outcome": "wrong_answer",
+      "latency_ms": 1378.941042,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1364760834,
+        "load_duration_ns": 4945208,
+        "prompt_eval_count": 952,
+        "prompt_eval_duration_ns": 387445000,
+        "eval_count": 36,
+        "eval_duration_ns": 957201000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "84",
+      "outcome": "wrong_answer",
+      "latency_ms": 2242.684667,
+      "agent_stats": {
+        "llm_turns": 3,
+        "tool_calls": 2,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2217276626,
+        "load_duration_ns": 4482668,
+        "prompt_eval_count": 1503,
+        "prompt_eval_duration_ns": 659206000,
+        "eval_count": 57,
+        "eval_duration_ns": 1534384000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 337.0,
+      "raw_result": "337",
+      "outcome": "correct",
+      "latency_ms": 1358.486667,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1343746667,
+        "load_duration_ns": 5028501,
+        "prompt_eval_count": 903,
+        "prompt_eval_duration_ns": 384673000,
+        "eval_count": 35,
+        "eval_duration_ns": 939066000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 101.0,
+      "raw_result": "31",
+      "outcome": "wrong_answer",
+      "latency_ms": 1356.814791,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1342903458,
+        "load_duration_ns": 3608917,
+        "prompt_eval_count": 925,
+        "prompt_eval_duration_ns": 386666000,
+        "eval_count": 35,
+        "eval_duration_ns": 937542000
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 105.0,
+      "raw_result": "105",
+      "outcome": "correct",
+      "latency_ms": 1485.809667,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1471375459,
+        "load_duration_ns": 4038876,
+        "prompt_eval_count": 995,
+        "prompt_eval_duration_ns": 516024000,
+        "eval_count": 35,
+        "eval_duration_ns": 938203000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 152.0,
+      "raw_result": "12416",
+      "outcome": "wrong_answer",
+      "latency_ms": 3179.854417,
+      "agent_stats": {
+        "llm_turns": 4,
+        "tool_calls": 3,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3141450874,
+        "load_duration_ns": 7452709,
+        "prompt_eval_count": 2095,
+        "prompt_eval_duration_ns": 815070000,
+        "eval_count": 85,
+        "eval_duration_ns": 2284498000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "7",
+      "outcome": "correct",
+      "latency_ms": 1371.141916,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1356979584,
+        "load_duration_ns": 2739125,
+        "prompt_eval_count": 921,
+        "prompt_eval_duration_ns": 393764000,
+        "eval_count": 35,
+        "eval_duration_ns": 948898000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 210.0,
+      "raw_result": "210",
+      "outcome": "correct",
+      "latency_ms": 2146.748166,
+      "agent_stats": {
+        "llm_turns": 3,
+        "tool_calls": 2,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2121536166,
+        "load_duration_ns": 5523083,
+        "prompt_eval_count": 1455,
+        "prompt_eval_duration_ns": 546414000,
+        "eval_count": 57,
+        "eval_duration_ns": 1546491000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 40.0,
+      "raw_result": "40",
+      "outcome": "correct",
+      "latency_ms": 1370.313791,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1354461041,
+        "load_duration_ns": 4332333,
+        "prompt_eval_count": 931,
+        "prompt_eval_duration_ns": 392021000,
+        "eval_count": 35,
+        "eval_duration_ns": 943831000
+      }
+    }
+  ]
+}

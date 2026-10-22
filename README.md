@@ -8,7 +8,7 @@ The project has no Beacon or health data. It uses the authors' 1,000 corrected S
 
 ## Current reproducible pilot
 
-The latest checked artifact is a matched 20-problem MCP-agent pilot using local `granite4:3b`, temperature `0`, and seed `798`. It compares canonical equations with the same randomly selected word problems in English, Arabic, Chinese, French, Russian, and Spanish. See the [result table, interpretation, limitations, and raw traces](results/pilot_20_seed798_granite_agent/README.md).
+The latest checked artifact is a matched 20-problem MCP-agent pilot using the complete five-model local agent list from the reused ADF configuration, temperature `0`, and seed `798`. It compares canonical equations with the same randomly selected word problems in English, Arabic, Chinese, French, Russian, and Spanish. See the [multi-model result table, agent diagnostics, limitations, and 35 raw runs](results/pilot_20_seed798_all_agent_models_T0/README.md).
 
 This is a preliminary pilot, not the full 1,000-record multilingual evaluation. The translated inputs preserve all numeric literals but are machine-generated and still require human linguistic review.
 

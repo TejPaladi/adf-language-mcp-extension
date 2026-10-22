@@ -1,0 +1,508 @@
+{
+  "run_id": "20261021T221131Z",
+  "created_at_utc": "2026-10-21T22:12:25.500919+00:00",
+  "architecture": "mcp_agent",
+  "condition": "language_extension",
+  "provider": "ollama",
+  "model": "llama3.2:1b",
+  "temperature": 0.0,
+  "input_language": {
+    "code": "en",
+    "name": "English",
+    "source": "unchanged upstream SVAMP Body and Question fields",
+    "canonical_rows_sha256": "768d7bcfb83060cca2cf477edd848fbf482c964a75d01880c3c7ea3b4481af30"
+  },
+  "sample": {
+    "method": "random_without_replacement",
+    "seed": 798,
+    "records": 20,
+    "population_records": 1000
+  },
+  "upstream_source": "upstream_adf/ (unchanged vendored snapshot)",
+  "tool_server": "upstream_adf/code/mcp_server.py",
+  "tool_set": [
+    "add",
+    "subtract",
+    "multiply",
+    "divide"
+  ],
+  "scoring": "Unchanged upstream strict numeric scorer: direct numeric output equals ADF Answer.",
+  "runtime_policy": {
+    "checkpoint_every": 10,
+    "ollama_timeout_seconds": 30.0,
+    "max_consecutive_api_errors": 3
+  },
+  "run_status": "completed",
+  "run_progress": {
+    "completed_records": 20,
+    "target_records": 20,
+    "elapsed_seconds": 53.842443
+  },
+  "summary": {
+    "records": 20,
+    "correct": 1,
+    "accuracy_percent": 5.0,
+    "outcomes": {
+      "correct": 1,
+      "wrong_answer": 6,
+      "format_failure": 13,
+      "api_error": 0
+    },
+    "wall_clock_seconds": 53.842443,
+    "average_latency_ms": 2692.122,
+    "agent": {
+      "llm_turns": 39,
+      "tool_calls": 19,
+      "tool_errors": 5,
+      "no_tool_answers": 1,
+      "max_steps_exceeded": 0
+    },
+    "provider_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "attempts": [
+    {
+      "problem_id": "chal-384",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 70.0,
+      "raw_result": "Paul had 265 more erasers than crayons left.",
+      "outcome": "format_failure",
+      "latency_ms": 1045.975291,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1002579708,
+        "load_duration_ns": 3595833,
+        "prompt_eval_count": 662,
+        "prompt_eval_duration_ns": 519078000,
+        "eval_count": 35,
+        "eval_duration_ns": 468995000
+      }
+    },
+    {
+      "problem_id": "chal-455",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "2",
+      "outcome": "wrong_answer",
+      "latency_ms": 3331.822542,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3324350792,
+        "load_duration_ns": 1832875,
+        "prompt_eval_count": 757,
+        "prompt_eval_duration_ns": 474922000,
+        "eval_count": 203,
+        "eval_duration_ns": 2839008000
+      }
+    },
+    {
+      "problem_id": "chal-64",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "Mary put in 4 cups of flour.",
+      "outcome": "format_failure",
+      "latency_ms": 703.9675,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 692355668,
+        "load_duration_ns": 1419584,
+        "prompt_eval_count": 664,
+        "prompt_eval_duration_ns": 175689000,
+        "eval_count": 38,
+        "eval_duration_ns": 505852000
+      }
+    },
+    {
+      "problem_id": "chal-773",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "{\"type\":\"function\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":10,\"b\":3}}, {\"type\":\"function\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":12,\"b\":44}}, {\"type\":\"function\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":12,\"b\":44}}, {\"type\":\"function\",\"function\":{\"name\":\"subtract\",\"description\":\"Subtract b from a: a - b\",\"parameters\":{\"a\":10,\"b\":3}}, {\"type\":\"function\",\"function\":{\"name\":\"divide\",\"description\":\"Divide a by b: a / b\",\"parameters\":{\"a\":10,\"b\":3}}, {\"type\":\"function\",\"function\":{\"name\":\"divide\",\"description\":\"Divide a by b: a / b\",\"parameters\":{\"a\":12,\"b\":44}}}}",
+      "outcome": "format_failure",
+      "latency_ms": 3088.865709,
+      "agent_stats": {
+        "llm_turns": 1,
+        "tool_calls": 0,
+        "tool_errors": 0,
+        "no_tool_answers": 1,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3086006625,
+        "load_duration_ns": 803958,
+        "prompt_eval_count": 427,
+        "prompt_eval_duration_ns": 300417000,
+        "eval_count": 200,
+        "eval_duration_ns": 2781580000
+      }
+    },
+    {
+      "problem_id": "chal-155",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "2",
+      "outcome": "correct",
+      "latency_ms": 3835.217625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3823044750,
+        "load_duration_ns": 2137291,
+        "prompt_eval_count": 639,
+        "prompt_eval_duration_ns": 153412000,
+        "eval_count": 258,
+        "eval_duration_ns": 3655390000
+      }
+    },
+    {
+      "problem_id": "chal-194",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 21.0,
+      "raw_result": "Fred earned $29 over the weekend.",
+      "outcome": "format_failure",
+      "latency_ms": 852.609375,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 839902876,
+        "load_duration_ns": 2507167,
+        "prompt_eval_count": 639,
+        "prompt_eval_duration_ns": 411490000,
+        "eval_count": 31,
+        "eval_duration_ns": 416363000
+      }
+    },
+    {
+      "problem_id": "chal-619",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 64.0,
+      "raw_result": "There are 12 children on the bus now.",
+      "outcome": "format_failure",
+      "latency_ms": 2381.604625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 2367697750,
+        "load_duration_ns": 1765958,
+        "prompt_eval_count": 612,
+        "prompt_eval_duration_ns": 389539000,
+        "eval_count": 143,
+        "eval_duration_ns": 1967282000
+      }
+    },
+    {
+      "problem_id": "chal-198",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "The grocery store had 26 bottles of diet soda.",
+      "outcome": "format_failure",
+      "latency_ms": 4135.869209,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4110895917,
+        "load_duration_ns": 4744791,
+        "prompt_eval_count": 627,
+        "prompt_eval_duration_ns": 369724000,
+        "eval_count": 268,
+        "eval_duration_ns": 3725070000
+      }
+    },
+    {
+      "problem_id": "chal-766",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 29.0,
+      "raw_result": "The final answer is: $\\boxed{3.22}$",
+      "outcome": "format_failure",
+      "latency_ms": 4160.022583,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4143741875,
+        "load_duration_ns": 1711500,
+        "prompt_eval_count": 636,
+        "prompt_eval_duration_ns": 383630000,
+        "eval_count": 269,
+        "eval_duration_ns": 3749023000
+      }
+    },
+    {
+      "problem_id": "chal-73",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 8.0,
+      "raw_result": "Since Jack received 3 emails in the morning and 5 emails in the afternoon, the total number of emails he received in the day is:\n\n3 + 5 = 8\n\nSo, Jack received 8 emails in the day.",
+      "outcome": "format_failure",
+      "latency_ms": 1375.239208,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 1362033958,
+        "load_duration_ns": 1604750,
+        "prompt_eval_count": 626,
+        "prompt_eval_duration_ns": 385832000,
+        "eval_count": 71,
+        "eval_duration_ns": 964723000
+      }
+    },
+    {
+      "problem_id": "chal-782",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 28.0,
+      "raw_result": "The mouse jumped 9 inches farther than the grasshopper.",
+      "outcome": "format_failure",
+      "latency_ms": 4085.19275,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4074829709,
+        "load_duration_ns": 2124667,
+        "prompt_eval_count": 674,
+        "prompt_eval_duration_ns": 209010000,
+        "eval_count": 270,
+        "eval_duration_ns": 3851328000
+      }
+    },
+    {
+      "problem_id": "chal-134",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 1.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 743.280167,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 729910626,
+        "load_duration_ns": 3533459,
+        "prompt_eval_count": 643,
+        "prompt_eval_duration_ns": 403402000,
+        "eval_count": 24,
+        "eval_duration_ns": 315862000
+      }
+    },
+    {
+      "problem_id": "chal-693",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 2.0,
+      "raw_result": "Danny had 52 wrappers at first.",
+      "outcome": "format_failure",
+      "latency_ms": 825.621417,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 813218125,
+        "load_duration_ns": 2821292,
+        "prompt_eval_count": 644,
+        "prompt_eval_duration_ns": 390829000,
+        "eval_count": 31,
+        "eval_duration_ns": 409384000
+      }
+    },
+    {
+      "problem_id": "chal-372",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 337.0,
+      "raw_result": "There are 337 boys in the school.",
+      "outcome": "format_failure",
+      "latency_ms": 4114.049958,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4100415709,
+        "load_duration_ns": 2035250,
+        "prompt_eval_count": 607,
+        "prompt_eval_duration_ns": 387539000,
+        "eval_count": 266,
+        "eval_duration_ns": 3701839000
+      }
+    },
+    {
+      "problem_id": "chal-408",
+      "operation_type": "Subtraction",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 101.0,
+      "raw_result": "The user needs to give away 4 Sony games to have 31 Sony games left.",
+      "outcome": "format_failure",
+      "latency_ms": 4193.646,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4179580667,
+        "load_duration_ns": 1685334,
+        "prompt_eval_count": 629,
+        "prompt_eval_duration_ns": 378424000,
+        "eval_count": 275,
+        "eval_duration_ns": 3790183000
+      }
+    },
+    {
+      "problem_id": "chal-681",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 105.0,
+      "raw_result": "69",
+      "outcome": "wrong_answer",
+      "latency_ms": 723.136708,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 0,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 710275042,
+        "load_duration_ns": 1637042,
+        "prompt_eval_count": 639,
+        "prompt_eval_duration_ns": 386953000,
+        "eval_count": 24,
+        "eval_duration_ns": 313082000
+      }
+    },
+    {
+      "problem_id": "chal-376",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 152.0,
+      "raw_result": "$76 - $204",
+      "outcome": "format_failure",
+      "latency_ms": 4189.138708,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 4175331791,
+        "load_duration_ns": 2170458,
+        "prompt_eval_count": 787,
+        "prompt_eval_duration_ns": 548256000,
+        "eval_count": 262,
+        "eval_duration_ns": 3615224000
+      }
+    },
+    {
+      "problem_id": "chal-82",
+      "operation_type": "Common-Division",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 7.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 3098.686292,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3085157750,
+        "load_duration_ns": 1479084,
+        "prompt_eval_count": 753,
+        "prompt_eval_duration_ns": 273596999,
+        "eval_count": 203,
+        "eval_duration_ns": 2798759000
+      }
+    },
+    {
+      "problem_id": "chal-860",
+      "operation_type": "Multiplication",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 210.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 3813.85475,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3800016542,
+        "load_duration_ns": 1398042,
+        "prompt_eval_count": 755,
+        "prompt_eval_duration_ns": 273423999,
+        "eval_count": 254,
+        "eval_duration_ns": 3515809000
+      }
+    },
+    {
+      "problem_id": "chal-259",
+      "operation_type": "Addition",
+      "input_kind": "svamp_body_plus_question",
+      "gold_answer": 40.0,
+      "raw_result": "0",
+      "outcome": "wrong_answer",
+      "latency_ms": 3104.400625,
+      "agent_stats": {
+        "llm_turns": 2,
+        "tool_calls": 1,
+        "tool_errors": 1,
+        "no_tool_answers": 0,
+        "max_steps_exceeded": 0,
+        "total_duration_ns": 3090504500,
+        "load_duration_ns": 1419208,
+        "prompt_eval_count": 751,
+        "prompt_eval_duration_ns": 271300000,
+        "eval_count": 203,
+        "eval_duration_ns": 2806937000
+      }
+    }
+  ]
+}
