@@ -17,7 +17,7 @@ from direct_language import DIRECT_SYSTEM_PROMPT, direct_word_problem_message
 from language_agent import LANGUAGE_SYSTEM_PROMPT, run_language_agent, word_problem_message
 from multilingual_data import MultilingualDataError, dataset_sha256, load_language_rows, validate_translation_records
 from prepare_multilingual_svamp import protect_numbers, restore_numbers
-from run_experiment import select_rows
+from run_experiment import is_provider_api_error, select_rows
 from run_model_matrix import build_jobs
 
 
@@ -189,6 +189,12 @@ class SamplingTests(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(len({row["ID"] for row in first}), 50)
         self.assertNotEqual(first, rows[:50])
+
+    def test_step_limit_is_not_treated_as_provider_outage(self) -> None:
+        step_limit = {"outcome": "api_error", "agent_stats": {"max_steps_exceeded": 1}}
+        provider_error = {"outcome": "api_error", "agent_stats": {"max_steps_exceeded": 0}}
+        self.assertFalse(is_provider_api_error(step_limit))
+        self.assertTrue(is_provider_api_error(provider_error))
 
 
 if __name__ == "__main__":

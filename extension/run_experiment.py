@@ -222,6 +222,15 @@ def write_payload(output: Path, payload: dict[str, Any]) -> None:
     temporary.replace(output)
 
 
+def is_provider_api_error(attempt: dict[str, Any]) -> bool:
+    """Distinguish provider outages from an agent reaching its step limit."""
+
+    return bool(
+        attempt.get("outcome") == "api_error"
+        and not attempt.get("agent_stats", {}).get("max_steps_exceeded", 0)
+    )
+
+
 def main() -> None:
     args = parse_args()
     if not 1 <= args.limit <= 1000:
@@ -341,7 +350,7 @@ def main() -> None:
                     "agent_stats": agent_stats,
                 }
                 attempts.append(attempt)
-                consecutive_api_errors = consecutive_api_errors + 1 if attempt["outcome"] == "api_error" else 0
+                consecutive_api_errors = consecutive_api_errors + 1 if is_provider_api_error(attempt) else 0
                 if len(attempts) % args.checkpoint_every == 0:
                     write_payload(output, payload("in_progress"))
                     print(f"Checkpoint: {len(attempts)}/{len(data)}")
